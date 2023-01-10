@@ -1,64 +1,99 @@
 <!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"><style>.content figure{margin-left:0;margin-right:0}a{color:#20cebe}.hero a{text-decoration:underline}</style>
     <title>Ivy Nyayieka's Data and Databases project website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
   </head>
-  <body bgcolor=”#DBF9FC">
-    <h1 style="background-color:#33475b">
-    <p style="background-color:#92a8d1">
-    <h1>Land-related notices in the weekly Kenya Gazette publications</h1>
-    <p><a href="https://github.com/ivynyayieka/kenya_gazette_land">Github Repository here</a></p>
-    <p> Through this project, I scraped the html pages of Kenya Gazette notices from 2010 to retrieve all information related to the Land Registration Act</p>
-    <h1>Here is a screenshot of the home page of the Kenya Gazette website</h1>
-    <img src="kenya_gazette_home.png" alt="Kenya Gazette website" width="1250" height="500">
-    <h1> The resulting database includes over 200,000 rows of data for notices related to:</h1>
-    <li>Issue of a Provisional Certificate of Title</li>
-    <li>Issue of a Provisional Certificate</li>
-    <li> Issue of a Provisional Lease</li>
-    <li>Loss of a Certificate of Lease</li>
-    <li>Issue of a New Land Title Deed</li>
-    <li>Cancellation of Title Deed</li>
-    <li>Reconstruction of Lost or Destroyed Land Register</li>
-    <li>etc etc etc</li>
-    <h1>Here is a screenshot of an example section within a weekly Kenya Gazette notice referencing the Land Registration Act</h1>
-    <img src="cropped_notice_example.png" alt="Land Registration Act section of a weekly notice">
-    <h2>Data sources:</h2>
-    <li><a href="http://kenyalaw.org/kenya_gazette/">Kenya Gazette notices</a></li>
-    <li><a href="http://kenyalaw.org/kenya_gazette/">Districts, areas and population in Kenya</a></li>
-    <h1> I scraped each notice entry for:</h1>
-    <li>The link for the relevant html page</li>
-    <li>The year of gazette notice and the url hosting all notices related to that year</li>
-    <li>The volume number</li>
-    <li>The volume date</li>
-    <li>The volume-specific links</li>
-    <li>The title of the notice number</li>
-    <li>The act referenced</li>
-    <li>The full body of the notice entry</li>
-    <li>The signing registrar's name</li>
-    <li>The location of the registrar</li>
-    <li>The District</li>
-    <li>THe location code</li>
-    <li>The population of the district</li>
-    <li>The area of the district</li>
-    <li>The capital of the location</li>
-    <li>The named individual(s)</li>
-    <li>The area of the land referenced</li>
-    <li>The title deed number</li>
-    <li>The individuals' ID</li>
-    <li>The individuals' address</li>
-    <li>The LR number</li>
-    <li>The municipality</li>
-    <li>The number of days notice allocates</li>
-    <li>The succession number</li>
-    <li>The township</li>
-    <li>The province</li>
-    <h1>Here is a screenshot of the first few rows and columns of the database generated</h1>
-    <img src="cropped_database_example.png" alt="Section of Resulting Database" width="1250" height="500">
-    <p><strong> Tech:</strong> <em>python, beautiful soup, regex</em><p>
+  <body>
+    <div class="container is-max-desktop">
+      <div class="notification is-warning">
+        <section class="hero is-medium is-warning">
+          <div class="hero-body">
+            <h1 class="title is-2">
+              Land-related notices in the weekly Kenya Gazette publications
+            </h1>
+            <p class="subtitle">
+              Through this project, I scraped the html pages of Kenya Gazette notices from 2010 to retrieve all information related to the Land Registration Act. Compiling data from this and two secondary sources resulted in a database with over 200,000 rows and 40 columns. 
+            </p>
+            <button class="button is-danger">
+              <a href="https://github.com/ivynyayieka/kenya_gazette_land">See the Github Repository here</a>
+            </button>
+          </div>
+        </section>
+
+        <section class="px-6">
+          <h1 class="title is-3">Here is a screenshot of the home page of the Kenya Gazette website</h1>
+          <figure class="image is-3by1">
+            <img src="kenya_gazette_home.png" alt="Kenya Gazette website">
+          </figure>
+          
+          <h1 class="title is-3">Here is a screenshot of an example section within a weekly Kenya Gazette notice referencing the Land Registration Act</h1>
+          <figure class="image is-3by5">
+            <img src="cropped_notice_example.png" alt="Land Registration Act section of a weekly notice">
+          </figure>
+          
+          <div class="columns">
+
+            <div class="column">
+              <h1 class="title is-4"> The resulting database includes over 200,000 rows of data for notices related to:</h1>
+              <li>Issue of a Provisional Certificate of Title</li>
+              <li>Issue of a Provisional Certificate</li>
+              <li> Issue of a Provisional Lease</li>
+              <li>Loss of a Certificate of Lease</li>
+              <li>Issue of a New Land Title Deed</li>
+              <li>Cancellation of Title Deed</li>
+              <li>Reconstruction of Lost or Destroyed Land Register</li>
+              <li>etc etc etc</li>
+            </div>
+
+            <div class="column">
+              <h2 class="title is-4">Data sources:</h2>
+              <li><a href="http://kenyalaw.org/kenya_gazette/">Kenya Gazette notices</a></li>
+              <li><a href="http://kenyalaw.org/kenya_gazette/">Districts, areas and population in Kenya</a></li>
+            </div>
+          </div>
+          
+
+          
+
+          <h1 class="title is-3"> I scraped each notice entry for details such as:</h1>
+          <img src="cropped_database_example.png" alt="Section of Resulting Database" width="1375" height="500">
+          <li>the link for the relevant html page</li>
+          <li>the year of gazette notice and the url hosting all notices related to that year</li>
+          <li>the volume number</li>
+          <li>the volume date</li>
+          <li>the volume-specific links</li>
+          <li>the title of the notice number</li>
+          <li>the act referenced</li>
+          <li>the full body of the notice entry</li>
+          <li>the signing registrar's name</li>
+          <li>the location of the registrar</li>
+          <li>the District</li>
+          <li>the location code</li>
+          <li>the population of the district</li>
+          <li>the area of the district</li>
+          <li>the capital of the location</li>
+          <li>the named individual(s)</li>
+          <li>the area of the land referenced</li>
+          <li>the title deed number</li>
+          <li>the individuals' ID</li>
+          <li>the individuals' address</li>
+          <li>the LR number</li>
+          <li>the municipality</li>
+          <li>the number of days notice allocates</li>
+          <li>the succession number</li>
+          <li>the township</li>
+          <li>the province</li>
+        </section>
+      </div>
+    </div>
+        <footer class="footer">
+          <div class="content has-text-centered">
+            <p><strong> Tech:</strong> <em>python, beautiful soup, regex</em><p>
+          </div>
+        </footer>
   </body>
 </html>
