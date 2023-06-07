@@ -291,3 +291,7 @@ df_large_districts['days'].sample(12)
 I wanted to have the option to group the data by provinces <br/>
 I made a dataset that matched every province code in the dataset to a province in Kenya <br/>
 I merged the resulting data to the main dataframe
+
+# How I mapped the dataset
+Having grouped the dataset by provinces, I made a chloropleth map showing the distribution of land-related gazette notice activity by province by joining the dataset to a shapefile for Kenya's provinces
+![Landing Page for 2022](land_gazette_map.png)
