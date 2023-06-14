@@ -4,6 +4,8 @@ This is a project scraping HTML pages of weekly Kenya Gazette notices starting f
 
 
 ### Getting the Data
+![recording](gazette_recording (1).gif)
+
 * [Weekly Kenya Gazette notices](http://kenyalaw.org/kenya_gazette/gazette)
 * [Districts, areas and population](http://www.statoids.com/yke.html)
 * [Shapefile of Kenyan provinces](https://www.igismap.com/kenya-shapefile-download-boundary-line-administrative-state-and-polygon/)
