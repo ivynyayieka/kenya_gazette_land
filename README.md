@@ -4,7 +4,8 @@ This is a project scraping HTML pages of weekly Kenya Gazette notices starting f
 
 
 ### Getting the Data
-![recording](gazette_recording (1).gif)
+![](gazette_recording (1).gif)
+
 
 * [Weekly Kenya Gazette notices](http://kenyalaw.org/kenya_gazette/gazette)
 * [Districts, areas and population](http://www.statoids.com/yke.html)
