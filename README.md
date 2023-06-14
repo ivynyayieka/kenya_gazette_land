@@ -1,4 +1,4 @@
-# Creating a database with a list of the issue of new land title deeds in Kenya.
+# [Creating a database with a list of the issue of new land title deeds in Kenya.](https://ivynyayieka.github.io/kenya_gazette_land/)
 
 This is a project scraping HTML pages of weekly Kenya Gazette notices starting from 2010 in order to retrieve and categorise land-related notices. The result is a database with more than 200,000 rows of land-related notice entries.
 
